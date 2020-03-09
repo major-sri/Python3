@@ -1,0 +1,55 @@
+# Dictionary
+#Common Syntax
+dictionary_name={'name':'utkarsh','age':20}.   //if you want to use 20 as integer don't put ''
+or
+#dictionary constructor (Dict)
+dictionary_name=dict(name='utkarsh',age=20)
+
+eg.
+//operations//
+
+a={'name':'utkarsh','age':20}
+print(a[1])   // utkarsh
+print(a.get(1)) // utkarsh
+
+# modify
+a[1]='srivastava'
+print(a[1]) // srivastava
+
+# add
+a[3]=20
+print(a[3]) // 20
+
+a.clear() // empties the dictionary
+
+b=a.copy() // copies dictionary a to b
+
+a.values() // print the values of the keys
+print(a.values()) // utkarsh 20
+
+a.keys() // print the keys of the values
+print(a.keys()) // name age
+
+a={'name':'utkarsh','age':20}
+b={'sex':'male'}
+a.update(b)
+print(a) //{'name': 'utkarsh', 'age': 20, 'sex': 'male'}
+
+a.pop('name')
+print(a) // {'age': 20, 'sex': 'male'}
+
+a.popitem()
+print(a) // {'name': 'utkarsh', 'age': 20}
+
+print(a.setdefault('name')) // utkarsh
+
+a.setdefault('na','sri') // setting up new key with its value in dictionary
+print(a.setdefault('na','sri')) // sri
+
+a={'name','age'}
+b='utkarsh'
+c=dict.fromkeys(a,b) // gives each key a value 
+print(c) // {'name': 'utkarsh', 'age': 'utkarsh'}
+
+
+
