@@ -5,7 +5,7 @@ or
 #dictionary constructor (Dict)
 dictionary_name=dict(name='utkarsh',age=20)
 
-eg.
+ eg.
 //operations//
 
 a={'name':'utkarsh','age':20}
