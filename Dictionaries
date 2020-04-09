@@ -50,6 +50,7 @@ print(a.setdefault('na','sri')) // sri
 a={'name','age'}
 b='utkarsh'
 c=dict.fromkeys(a,b) // gives each key a value 
+
 print(c) // {'name': 'utkarsh', 'age': 'utkarsh'}
 
 
