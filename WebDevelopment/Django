@@ -1,0 +1,93 @@
+//setup in pycharm
+
+create new file 
+open terminal //to install django
+type-> pip install django==2.1 //you can take any version
+type-> django-admin startproject webdev .  //let the name of your file be webdev
+type-> python3 manage.py runserver //it'll open a webserver with given ip address
+
+//now open new terminal window
+type-> python3 manage.db projects //this will create a new folder under your project
+
+#First view function /products
+
+-> open products file select views file
+
+type->
+
+from django.http import HttpResponse
+from django.shortcuts import render
+
+def index(request):
+    return HttpResponse('helloworld')
+    
+#now we'll do url mapping
+
+create a new file in products folder by the name of urls
+
+type->
+
+from django.urls import path
+from . import views
+
+urlpatterns=[
+    path('',views.index)
+]
+
+#open urls.py file from main folder ie. webdev
+
+type->
+
+from django.contrib import admin
+from django.urls import path,include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('products/',include('products.urls'))
+    
+# now type /products on webpage 
+
+#if we want to add /products/new then->
+
+//open views.py
+
+type->
+
+from django.http import HttpResponse
+from django.shortcuts import render
+
+
+def index(request):
+    return HttpResponse('helloworld')
+
+
+def new(request):                                     //add//
+    return HttpResponse('new products')
+    
+//open products->urls.py
+
+type->
+
+from django.urls import path
+from . import views
+
+urlpatterns=[
+    path('',views.index),
+    path('new',views.new)                 //add//
+]    
+
+
+#Models
+
+// go to products->module.py
+
+type->
+
+from django.db import models
+
+
+class Product (models.Model):
+    name = models.CharField(max_lenght=255)
+    price = models.FloatField()
+    stock = models.IntegerField()
+    image_url = models.CharField(max_length=2083)
