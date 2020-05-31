@@ -1,5 +1,4 @@
 //setup in pycharm
-
 create new file 
 open terminal //to install django
 type-> pip install django==2.1 //you can take any version
