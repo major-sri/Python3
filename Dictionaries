@@ -12,7 +12,6 @@ dictionary_name=dict(name='utkarsh',age=20)
 a={'name':'utkarsh','age':20}
 print(a[1])   // utkarsh
 print(a.get(1)) // utkarsh
-
 # modify
 a[1]='srivastava'
 print(a[1]) // srivastava
